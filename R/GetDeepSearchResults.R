@@ -65,7 +65,7 @@ GetDeepSearchResults <- function(address, city=NULL, state=NULL, zipcode=NULL, r
 
   #check to make sure address worked
   if(xmlresult %>% html_text() %>% length() == 0){
-    return 0
+    return FALSE
     #warning('invalid address, NAs returned')
     #outdf <- c(address) %>% t() %>% data.frame()
     #names(outdf) <- c('address')
